@@ -17,11 +17,6 @@
 AlloVera is a multilingual database mapping phones (allophones) to the phonemes they
 realize, for 14 languages. This loader covers the three SEACrowd-relevant subsets:
 Javanese, Tagalog, and Vietnamese.
-
-NOTE: the SEACrowd datasheet lists the task for this dataset as Automatic Speech
-Recognition, but AlloVera contains no audio -- only static phone-to-phoneme mapping
-tables per language. We map it to Transliteration (seacrowd_t2t) instead, since that
-is the schema that actually fits the data (phone -> phoneme string pairs).
 """
 import json
 from pathlib import Path
@@ -60,8 +55,7 @@ _DATASETNAME = "allovera"
 _DESCRIPTION = """\
 AlloVera provides mappings from 218 allophones to phonemes for 14 languages. Phonemes
 are contrastive phonological units, and allophones are their various concrete
-realizations, which are predictable from phonological context. This loader covers the
-Javanese, Tagalog, and Vietnamese subsets.
+realizations, which are predictable from phonological context.
 """
 
 _HOMEPAGE = "https://github.com/dmort27/allovera"
